@@ -1,0 +1,27 @@
+div.login-container {
+    width: 37%;
+}
+
+div.login-container h6 {
+    text-align: center;
+    color: #444;
+    margin-bottom: 10%;
+}
+
+div.login-container form {
+    margin-bottom: 0;
+}
+
+div.exist {
+    margin-top: 2%;
+    color: #ddd;
+    text-align: center;
+}
+
+div.exist p {
+    margin: 1px;
+}
+
+div.exist a {
+    color: #fff;
+}
