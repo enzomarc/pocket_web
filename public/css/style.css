@@ -28,6 +28,13 @@ div.login-container {
     width: 70%;
 }
 
+@media (max-width: 700px) {
+    div.login-container {
+        width: 90%;
+        margin: 0 auto 50px auto;
+    }
+}
+
 div.login-container h6 {
     margin-bottom: 7px;
     color: #0c81e7;
@@ -61,4 +68,16 @@ div.login-container div.exist {
     color: #777;
     margin-top: 8px;
     text-align: center;
+}
+
+div#pwd-rules {
+    padding: 10px;
+    background-color: #0bc3614a;
+    margin-bottom: 10px;
+    border-radius: 3px;
+    display: none;
+}
+
+div#pwd-rules p {
+    font-size: .8em;
 }

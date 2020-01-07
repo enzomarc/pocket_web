@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -36,4 +37,30 @@ class LoginController extends Controller
     {
         $this->middleware('guest')->except('logout');
     }
+	
+	/**
+	 * Show login page.
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+	 */
+	public function login()
+	{
+		if (Session::has('user') && Session::get('user') != null)
+			return redirect()->route('dashboard');
+		
+		return view('login');
+   }
+	
+	/**
+	 * Show registration page.
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\Http\RedirectResponse|\Illuminate\View\View
+	 */
+	public function signup()
+	{
+		if (Session::has('user') && Session::get('user') != null)
+			return redirect()->route('dashboard');
+		
+		return view('signup');
+   }
 }
