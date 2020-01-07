@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('login', 'Auth\LoginController@login')->name('login');
 Route::get('signup', 'Auth\LoginController@signup')->name('signup');
+
+Route::get('dashboard', 'UserController@home')->name('dashboard.home');
