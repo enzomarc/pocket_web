@@ -1,0 +1,94 @@
+#header {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 2% auto;
+    color: #555;
+    font-size: 16px;
+}
+
+#header h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+#steps {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#steps .four {
+    background-color: #fff;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3%;
+    text-align: center;
+    width: 300px;
+    border: solid .5px #eee;
+    margin-top: 2%;
+}
+
+#steps .four i {
+    font-size: 40px;
+    color: #555;
+}
+
+#steps .four h6 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-top: 15px;
+    color: #555;
+}
+
+#steps .four p, #support a {
+    font-size: 14px;
+    color: #999;
+    transition: all .3s;
+}
+
+#support a:hover {
+    color: #777;
+}
+
+#support {
+    text-align: center;
+    margin: 2% 0 5% 0;
+}
+
+.two h6 {
+    font-size: 17px;
+    color: #999;
+    line-height: 1.3em;
+}
+
+.six {
+    display: flex;
+    flex-direction: column;
+}
+
+.six a.button {
+    width: 100px;
+    padding: 0 10px;
+}
+
+.six h6 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+    color: #555;
+}
+
+.six p {
+    font-size: 15px;
+    color: #777
+}
+
+.six #also {
+    color: #999;
+    font-size: 13px;
+}

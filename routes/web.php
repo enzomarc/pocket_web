@@ -18,3 +18,4 @@ Route::get('login', 'Auth\LoginController@login')->name('login');
 Route::get('signup', 'Auth\LoginController@signup')->name('signup');
 
 Route::get('dashboard', 'UserController@home')->name('dashboard.home');
+Route::get('dashboard/getting-started', 'UserController@start')->name('dashboard.start');

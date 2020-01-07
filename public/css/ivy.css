@@ -364,6 +364,46 @@ label > .label-body {
 	display: inline-block;
 	margin-left: .5rem;
 	font-weight: normal; }
+/* Labeled control */
+.labeled-control {
+	margin-bottom: 1em;
+}
+.labeled-control .before {
+	background-color: #EDF1F2;
+	padding: 2%;
+	font-size: 13px;
+	border: solid .5px #eee;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	color: #444;
+	margin: 0;
+	height: 40px;
+}
+.labeled-control .after {
+	background-color: #EDF1F2;
+	padding: 1.9%;
+	font-size: 13px;
+	border: solid .5px #eee;
+	border-bottom-right-radius: 3px;
+	border-top-right-radius: 3px;
+	color: #444;
+	margin: 0;
+	position: relative;
+	left: -9px;
+	height: 40px;
+}
+.labeled-control .after a, .labeled-control .before a {
+	color: #444;
+}
+.labeled-control input {
+	border: solid .5px #eee;
+	margin: 0;
+	border-radius: 0;
+	position: relative;
+	left: -5px;
+	width: 57%;
+	height: 40px;
+}
 
 
 /* Badges
