@@ -27,4 +27,15 @@ class UserController extends Controller
 		$page = 'home';
 		return view('dashboard.home', compact('page'));
 	}
+	
+	/**
+	 * Show activation page.
+	 *
+	 * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
+	 */
+	public function activation()
+	{
+		$page = 'getting started';
+		return view('dashboard.activation', compact('page'));
+	}
 }

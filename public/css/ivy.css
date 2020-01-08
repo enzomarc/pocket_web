@@ -406,6 +406,36 @@ label > .label-body {
 }
 
 
+/* Alerts
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.alert {
+	background-color: #EDF1F2;
+	border-radius: 3px;
+	padding: 30px 20px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	color: #555;
+	margin-bottom: 2em;
+	border: solid .5px #ddd;
+}
+
+.alert * {
+	margin: 0;
+}
+
+.alert i {
+	font-size: 30px;
+	margin-right: 1.5%;
+	color: #999;
+}
+
+.alert h6 {
+	font-size: 16px;
+	font-weight: 500;
+}
+
+
 /* Badges
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .badge {

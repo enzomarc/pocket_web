@@ -118,3 +118,17 @@ html, body {
     max-width: 100%;
     width: 85%;
 }
+
+#header {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto 2% auto;
+    color: #555;
+    font-size: 16px;
+}
+
+#header h3 {
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
