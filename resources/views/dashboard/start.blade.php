@@ -17,10 +17,10 @@
             </div>
             <div class="row">
                 <h6>Activate Your Business</h6>
-                <p>1 of 4 tasks completed</p>
+                <p>2 of 4 tasks completed</p>
             </div>
             <div class="row">
-                <button>Continue</button>
+                <a href="{{ route('dashboard.activation') }}" class="button">Continue</a>
             </div>
         </div>
         <div class="four columns">

@@ -1,35 +1,58 @@
 let selected = null;    // Selected shop
+let user = null;
+const API_ENDPOINT = "http://localhost:3000/api";
 
 const logout = function () {
     sessionStorage.removeItem('user');
-    localStorage.removeItem('user');
+    sessionStorage.removeItem('shop');
+    selected = null;
     location.replace('/login');
 };
 
 if (sessionStorage.getItem('user') == null) {
     logout();
 } else {
-    const API_ENDPOINT = "http://192.168.8.104:3000/api";
-    const user = JSON.parse(sessionStorage.getItem('user'));
-    // const token = user.token; Check token to verify user
-    const shops = user.shops;
-    window.user = user;
-    window.shops = shops;
+    user = JSON.parse(sessionStorage.getItem('user'));
+    const token = user.token;
 
-    if (shops.length <= 0)
+    /* Check user existence */
+    $.ajax({
+        url: API_ENDPOINT + '/check/' + token,
+        method: 'GET',
+        success: (data) => {
+            user = data.user;
+            sessionStorage.removeItem('user');
+            sessionStorage.setItem('user', JSON.stringify(user));
+        },
+        error: () => {
+            logout();
+        }
+    });
+
+    window.user = user;
+
+    if (user.shops.length <= 0)
         logout();
     else {
-        _.each(shops, (shop) => {
-            if (shop.active)
-                selected = shop;
-        });
+        if (sessionStorage.getItem('shop') == null) {
+            _.each(user.shops, (shop) => {
+                if (shop.active)
+                    selected = shop;
+            });
 
-        if (selected != null) {
-            if (sessionStorage.getItem('shop') == null)
-                sessionStorage.setItem('shop', JSON.stringify(selected));
+            if (selected != null) {
+                if (sessionStorage.getItem('shop') == null)
+                    sessionStorage.setItem('shop', JSON.stringify(selected));
+            } else {
+                logout();
+                flash("All your shops are disabled. Try contact your shop administrator.", 'warning');
+            }
         } else {
-            logout();
-            flash("All your shops are disabled. Try contact your shop administrator.", 'warning');
+            const selected_id = JSON.parse(sessionStorage.getItem('shop')).id;
+            selected = _.where(user.shops, { id: selected_id })[0];
+            selected.socials = JSON.parse(selected.socials);
+            sessionStorage.removeItem('shop');
+            sessionStorage.setItem('shop', JSON.stringify(selected));
         }
     }
 }

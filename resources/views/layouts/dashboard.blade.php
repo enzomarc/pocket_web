@@ -25,8 +25,8 @@
     <div class="row" style="height: 100%">
         <div class="two columns menu">
             <div class="row account-info">
-                <h5 class="shop-name">Pocket</h5>
-                <span class="user-mail">support@pocket.com</span>
+                <h5 class="xshopname">Pocket</h5>
+                <span class="xusermail">support@pocket.com</span>
             </div>
 
             <div class="row menu-group">
@@ -141,10 +141,14 @@
             </div>
         </div>
     </div>
-
 <script>
-    $('.user-mail').text(window.user.email);
-    $('.shop-name').text(selected.business_name);
+    $('.xusermail').text(window.user.email);
+    $('.xuserfirstname').text(window.user.first_name);
+    $('.xuserlastname').text(window.user.last_name);
+    $('.xuserphone').text(window.user.phone);
+    $('.xshopname').text(selected.business_name);
+    toastr.options.progressBar = true;
+    toastr.options.closeButton = true;
 
     $('li.active').removeClass('active');
 
@@ -155,6 +159,16 @@
 
         if (str === "{{ $page }}")
             item.classList.add('active');
+    });
+
+    $('.modal-close').click(function () {
+        const modal = $(this)[0].dataset['modal'];
+        close_modal(modal);
+    });
+
+    $('.modal-show').click(function () {
+        const modal = $(this)[0].dataset['modal'];
+        show_modal(modal);
     });
 </script>
 @yield('script')

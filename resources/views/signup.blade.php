@@ -71,6 +71,9 @@
 
     <!-- Sign-up Script -->
     <script>
+        toastr.options.progressBar = true;
+        toastr.options.closeButton = true;
+
         $('#signup-form').submit(function (e) {
             e.preventDefault();
             e.stopPropagation();

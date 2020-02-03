@@ -55,6 +55,9 @@
 
 <!-- Login Script -->
 <script>
+    toastr.options.progressBar = true;
+    toastr.options.closeButton = true;
+
     $('#login-form').submit(function (e) {
         e.preventDefault();
         e.stopPropagation();
@@ -69,7 +72,7 @@
             success: function (data) {
                 toastr.success(data.message, "Success");
                 sessionStorage.setItem('user', JSON.stringify(data.user));
-                localStorage.setItem('user', JSON.stringify(data.user));
+
                 setTimeout(() => {
                     location.replace('/dashboard');
                 }, 2000);

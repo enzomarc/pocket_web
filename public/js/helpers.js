@@ -21,3 +21,34 @@ const flash = function (message, type) {
     const msg = { type: type, message: message };
     sessionStorage.setItem('flash', JSON.stringify(msg));
 };
+
+const close_modal = function (modal) {
+    $('#' + modal + ' .modal-container').slideUp(300);
+    $('#' + modal).fadeOut(400);
+};
+
+const show_modal = function (modal) {
+    $('#' + modal).fadeIn(300).css('display', 'flex');
+    $('#' + modal + ' .modal-container').slideDown(400);
+};
+
+/**
+ * Replace session user with the given user.
+ *
+ * @param user
+ */
+const replace_user = function (user) {
+    sessionStorage.removeItem('user');
+    sessionStorage.setItem('user', JSON.stringify(user));
+};
+
+/**
+ * Replace session selected shop.
+ *
+ * @param shop
+ */
+const replace_shop = function (shop) {
+    selected = shop;
+    sessionStorage.removeItem('shop');
+    sessionStorage.setItem('shop', JSON.stringify(shop));
+};
