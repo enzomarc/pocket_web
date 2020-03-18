@@ -73,6 +73,18 @@ html, body {
     margin: 20px 10px;
 }
 
+.left {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
 
 /* Container */
 .content {
@@ -85,9 +97,20 @@ html, body {
 .content .navbar {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     background-color: #fff;
     border-bottom: solid .5px #eee;
+}
+
+.content .navbar .left {
+    align-items: center;
+    padding-left: 25px;
+}
+
+.content .navbar .left h4 {
+    margin: 0;
+    font-weight: 400;
+    font-size: 24px;
+    color: #444
 }
 
 .content .navbar ul {
@@ -114,9 +137,9 @@ html, body {
 }
 
 .container {
-    padding-top: 2%;
     max-width: 100%;
-    width: 85%;
+    width: 100%;
+    padding: 40px
 }
 
 #header {

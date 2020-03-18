@@ -20,3 +20,4 @@ Route::get('signup', 'Auth\LoginController@signup')->name('signup');
 Route::get('dashboard', 'UserController@home')->name('dashboard.home');
 Route::get('dashboard/getting-started', 'UserController@start')->name('dashboard.start');
 Route::get('dashboard/getting-started/activation', 'UserController@activation')->name('dashboard.activation');
+Route::get('dashboard/customers', 'CustomerController@index')->name('customers.index');

@@ -62,7 +62,7 @@
                 <span class="group-title">YOUR CUSTOMERS</span>
                 <ul>
                     <li>
-                        <a href="#"><i class="fa fa-users"></i>Customers</a>
+                        <a href="{{ route('customers.index') }}"><i class="fa fa-users"></i>Customers</a>
                     </li>
                     <li>
                         <a href="#"><i class="fa fa-pie-chart"></i>Insights</a>
@@ -121,22 +121,27 @@
 
         <div class="ten columns content" style="width: 86.666667%;">
             <div class="row navbar">
-                <ul>
-                    <li>
-                        <a href="">
-                            <i class="fa fa-bell-o"></i>
-                        </a>
-                    </li>
+                <div class="six columns left">
+                    <h4>{{ $title ?? '' }}</h4>
+                </div>
+                <div class="six columns right">
+                    <ul>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-bell-o"></i>
+                            </a>
+                        </li>
 
-                    <li>
-                        <a href="">
-                            <i class="fa fa-user"></i>
-                        </a>
-                    </li>
-                </ul>
+                        <li>
+                            <a href="">
+                                <i class="fa fa-user"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </div>
 
-            <div class="row container">
+            <div class="row">
                 @yield('content')
             </div>
         </div>

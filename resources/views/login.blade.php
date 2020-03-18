@@ -22,7 +22,7 @@
 <body>
 <div class="container">
     <div class="row logo">
-        <h5>Pocket</h5>
+        <h5>UneFois</h5>
     </div>
 
     <div class="row login-container">
@@ -44,7 +44,7 @@
     </div>
 
     <div class="row exist">
-        <p>New to Pocket? <a href="{{ route('signup') }}">Sign Up</a></p>
+        <p>New to UneFois? <a href="{{ route('signup') }}">Sign Up</a></p>
         <a href="#">Forgot your password?</a>
     </div>
 </div>

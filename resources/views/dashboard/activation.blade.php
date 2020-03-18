@@ -5,7 +5,7 @@
 @stop
 
 @section('content')
-    <div class="container">
+    <div class="container" style="padding: 50px 50px 0 50px">
         <div class="row" id="header">
             <h3>Activate your business</h3>
             <p>To activate your business, kindly complete the checks below. When you're done, click the "Send Activation Request" button.</p>
